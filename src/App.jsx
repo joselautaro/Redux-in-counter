@@ -2,6 +2,10 @@
 import { legacy_createStore as createStore} from 'redux'
 import { Provider, connect } from 'react-redux'
 import './App.css'
+import { Seconds } from './components/Seconds/Seconds'
+import { TodoList } from './components/TodoList/TodoList'
+import { Calculator } from './components/Calculator/Calculator'
+
 
 // Definir el estado inicial
 
@@ -74,7 +78,10 @@ function App() {
   return (
     <>
       <Provider store={store}>
+        <Seconds/>
         <ConnectedCounter/>
+        <TodoList/>
+        <Calculator/>
       </Provider>
 
     </>
